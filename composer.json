@@ -1,0 +1,27 @@
+{
+  "name": "jinnguyen/puja-stdlib",
+  "description": "Puja-Stdlib provides basic functions such as File,Folder and more ",
+  "type": "library",
+  "license": "Apache License 2.0",
+  "keywords": [
+    "Puja",
+    "File System",
+    "Folder",
+    "Standard lib",
+    "FileSystem"
+  ],
+  "authors": [
+    {
+      "name": "Jin Nguyen",
+      "email": "w2ajax@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+  },
+  "autoload": {
+    "psr-4": {
+      "Puja\\Stdlib\\": "src/"
+    }
+  }
+}
