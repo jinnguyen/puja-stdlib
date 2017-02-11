@@ -17,6 +17,7 @@ Document document at http://php.net/manual/en/class.splfileinfo.php <br />
 <strong>Addition functions</strong>
 <pre>
 <strong>array Puja\Stdlib\File\Info::getBasenameWithoutExt($subfix = null)</strong>  // Return the file name without ext
+<strong>string Puja\Stdlib\File\Info::getContent()</strong>  // Return the file content
 </pre>
 
 
