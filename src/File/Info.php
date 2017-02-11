@@ -8,4 +8,11 @@ class Info extends \SplFileInfo
         $ext = $this->getExtension();
         return substr($filename, 0, -1 * strlen($ext) - 1) . $suffix;
     }
+
+    public function getContent()
+    {
+        return  file_get_contents($this->getRealPath());
+    }
+
+
 }
