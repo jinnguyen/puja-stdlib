@@ -32,6 +32,9 @@ Document at http://php.net/manual/en/class.directoryiterator.php
 <strong>array Puja\Stdlib\Folder\Folder::getChildFiles()</strong>  // Return a list of child files in folder
 <strong>array Puja\Stdlib\Folder\Folder::getChildFoldes()</strong>  // Return a list of sub folders in folder
 <strong>array Puja\Stdlib\Folder\Folder::getChild()</strong>  // Return a list of both child files and sub folders in folder
+<strong>array Puja\Stdlib\Folder\Folder::getDirectChildFiles()</strong>  // Return a list of direct child files in folder
+<strong>array Puja\Stdlib\Folder\Folder::getDirectChildFoldes()</strong>  // Return a list of direct sub folders in folder
+<strong>array Puja\Stdlib\Folder\Folder::getDirectChild()</strong>  // Return a list of both direct child files and direct sub folders in folder
 </pre>
 
 

@@ -6,7 +6,7 @@ class Folder extends \DirectoryIterator
     {
         $childFiles = array();
         $objects = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($this->getRealPath(), \RecursiveDirectoryIterator::SKIP_DOTS), $order);
-        foreach($objects as $file => $object) {
+        foreach ($objects as $file => $object) {
             if ($object->isFile()) {
                 $childFiles[] = $file;
             }
@@ -19,7 +19,7 @@ class Folder extends \DirectoryIterator
     {
         $childFolders = array();
         $objects = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($this->getRealPath(), \RecursiveDirectoryIterator::SKIP_DOTS), $order);
-        foreach($objects as $folder => $object) {
+        foreach ($objects as $folder => $object) {
             if ($object->isDir()) {
                 $childFolders[] = $folder;
             }
@@ -32,10 +32,46 @@ class Folder extends \DirectoryIterator
     {
         $childs = array();
         $objects = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($this->getRealPath(), \RecursiveDirectoryIterator::SKIP_DOTS), $order);
+        foreach ($objects as $name => $object) {
+            $childs[] = $name;
+        }
+
+        return $childs;
+    }
+
+    public function getDirectChildFolders()
+    {
+        $childFolders = array();
+        $objects = new \RecursiveDirectoryIterator($this->getRealPath(), \RecursiveDirectoryIterator::SKIP_DOTS);
+        foreach ($objects as $folder => $object) {
+            if ($object->isDir()) {
+                $childFolders[] = $folder;
+            }
+        }
+
+        return $childFolders;
+    }
+
+    public function getDirectChildFiles()
+    {
+        $childFiles = array();
+        $objects = new \RecursiveDirectoryIterator($this->getRealPath(), \RecursiveDirectoryIterator::SKIP_DOTS);
+        foreach ($objects as $file => $object) {
+            if ($object->isFile()) {
+                $childFiles[] = $file;
+            }
+        }
+    }
+
+    public function getDirectChild()
+    {
+        $childs = array();
+        $objects = new \RecursiveDirectoryIterator($this->getRealPath(), \RecursiveDirectoryIterator::SKIP_DOTS);
         foreach($objects as $name => $object) {
             $childs[] = $name;
         }
 
         return $childs;
     }
+
 }
